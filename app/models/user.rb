@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :followers, through: :follow_requests
-  has_ many :leaders, through: :follow_requests
+  has_many :leaders, through: :follow_requests
   has_many :discoverys, through: :follow_requests
   has_many :likes
   has_many :follow_requests, class_name: "FollowRequest", foreign_key: "sender_id"
