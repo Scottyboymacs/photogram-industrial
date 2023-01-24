@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2023_01_24_173638) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["recipient_id"], name: "index_follow_requests_on_recipient_id"
     t.index ["sender_id"], name: "index_follow_requests_on_sender_id"
+    t.string :status, default: "pending"
   end
 
   create_table "likes", force: :cascade do |t|
